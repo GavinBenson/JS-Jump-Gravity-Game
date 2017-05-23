@@ -1,0 +1,22 @@
+body {
+	text-align:center;
+	background-color: #0080D0;
+	background-image: url("../images/Sand.jpg");
+}
+#sandpic {
+	border-style: ridge;
+	border-width: 5px;
+	border-color: #00FFFF;
+	box-shadow: 8px 8px 8px #0000FF;
+	margin: auto;
+}
+#desc {
+	padding-left: 300px;
+	padding-right: 300px;
+}
+h1 {
+	color: #0080D0;
+}
+h4 {
+	text-align: center;
+}

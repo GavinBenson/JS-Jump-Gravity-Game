@@ -1,0 +1,20 @@
+body {
+	background-image: url("../images/1.jpg");
+	background-color: #f5f5dc;
+	text-align: center;
+	color: #f5f5dc;
+}
+canvas {
+    border:3px solid #d3d3d3;
+    background-color: #f5f5dc;
+    display: block;
+	width: 680px;
+	margin: auto;
+}
+#gameDiv {
+
+}
+button {
+	border: 2px solid #000000;
+	box-shadow: 4px 2px 6px #0000FF;
+}

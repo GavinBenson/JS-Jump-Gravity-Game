@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>1</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" type="text/css" href="css/game.css">
+		<script src="js/game.js"></script>
+		</head>
+		<body>
+		<br>
+		<h1>My W3 JavaScript Game!</h1>
+		<br>
+		<button onclick="startGame()">Start game</button>
+		<br>
+		<br>
+		<button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">
+			ACCELERATE
+		</button>
+		Width: <input type="text" size="10" id="gameWidth">
+		Height: <input type="text" size="10" id="gameHeight">
+		<button type="button" onclick="updateCanvasSize()">Update</button>
+		
+		
+		<p>
+			Use the ACCELERATE button to stay in the air
+		</p>
+		<p>
+			How long can you stay alive?
+		</p>
+		<script src="js/game.js"></script>
+		</body>
+</html>

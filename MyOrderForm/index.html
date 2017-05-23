@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>My Order Form</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Ranga" rel="stylesheet">
+		<link rel="stylesheet" href="css/w3.css"></link>
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+		<script src="js/accounting.js"></script>
+		<script src="js/orderProcessing.js"></script>
+		<script src="js/hamburgerLinks.js"></script>
+		<style>
+			body {
+				font-family: 'Roboto', sans-serif;
+				margin: auto;padding 10px;
+				background-color: #0080D0;
+				background-image: url("images/Sand.jpg");
+			}
+			h1 {
+				text-align: center;
+				font-family: 'Roboto', sans-serif;
+			}
+			h2 {
+				text-align: center;
+				font-family: 'Roboto', sans-serif;
+			}
+			.about {
+				font-family: 'Ranga', cursive;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div class="w3-sidebar w3-bar-block w3-card-2 w3-animate-left" style="display:none" id="mySidebar">
+			<button class="w3-bar-item w3-button w3-large"
+			onclick="w3_close()">
+				Close &times;
+			</button>
+			<a href="home.html" class="w3-bar-item w3-button">Home</a>
+			<a href="products.html" class="w3-bar-item w3-button">Products</a>
+			<a href="index.html" class="w3-bar-item w3-button">Order</a>
+		</div>
+
+		<div zclass="w3-main" id="main">
+
+			<button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">
+				&#9776;
+			</button>
+
+			<h1>Welcome to my Sand Store!</h1>
+			<h2>Created by Gavin B. / April 2017</h2>
+			<h4><a href="clock.html">Go to my clock!</a></h4>
+			<br>
+			<br>
+			<div class="w3-bar w3-teal">
+				<a href="index.html" class="w3-bar-item w3-button">Home</a>
+				<a href="http://192.168.1.113/a4murphy/" class="w3-bar-item w3-button">Classmate's Website</a>
+			</div>
+		</div>
+		</div>
+		<br>
+
+		<form name="orderForm">
+			<table style="background-color:fff0b3"
+			border="2" width="700" cellpadding="5"
+			cellspacing="1" align="center" summary="">
+				<tbody>
+					<tr>
+						<td colspan="4" align="center" style="background-color:#ffe066"><B>Order Form</B></td>
+					</tr>
+					<tr style="background-color:#99ff99">
+						<td>Item</td>
+						<td>Qty</td>
+						<td>Price</td>
+						<td align="right">Total</td>
+					</tr>
+					<tr style="background-color:#fff0b3">
+						<td><a href="description/description_yellow.html">A Grain of Yellow Sand</a></td>
+						<td>
+						<input name="line" type="text" size="5"
+						value="" onkeyup="count(this.form,0,138)">
+						</td>
+						<td>$ 138</td>
+						<td align="right">
+						<input name="line_sum"
+						type="text" size="10" readonly>
+						</td>
+					</tr>
+					<tr style="background-color:#fff0b3">
+						<td><a href="description/description_gray.html">A Grain of Gray Sand</a></td>
+						<td>
+						<input name="line" type="text" size="5"
+						value="" onkeyup="count(this.form,1,170.95)">
+						</td>
+						<td>$ 170.95</td>
+						<td align="right">
+						<input name="line_sum"
+						type="text" size="10" readonly>
+						</td>
+					</tr>
+					<tr style="background-color:#fff0b3">
+						<td><a href="description/description_orange.html">A Grain of Orange Sand</a></td>
+						<td>
+						<input name="line" type="text" size="5"
+						value="" onkeyup="count(this.form,2,250.95)">
+						</td>
+						<td>$ 250.95</td>
+						<td align="right">
+						<input name="line_sum"
+						type="text" size="10" readonly>
+						</td>
+					</tr>
+					<tr style="background-color:#fff0b3">
+						<td><a href="description/description_beam.html">A Steel Beam made of Sand</a></td>
+						<td>
+						<input name="line" type="text" size="5"
+						value="" onkeyup="count(this.form,3,2.60)">
+						</td>
+						<td>$ 2.60</td>
+						<td align="right">
+						<input name="line_sum" type="text"
+						size="10" readonly>
+						</td>
+					</tr>
+					<tr style="background-color:#fff0b3">
+						<td><a href="description/description_black.html">A Grain of Black Sand</a></td>
+						<td>
+						<input name="line" type="text" size="5" value=""
+						onkeyup="count(this.form,4,360.25)">
+						</td>
+						<td>$ 360.25</td>
+						<td align="right">
+						<input name="line_sum" type="text" size="10" readonly>
+						</td>
+					</tr>
+					<tr style="background-color:#99ff99">
+						<td colspan="3" align="right">Options Total : </td>
+						<td align="right">
+						<input name="grand_total" type="text" size="10" readonly>
+						</td>
+					</tr>
+					<tr style="background-color:#fff0b3">
+						<td>Box Size</td>
+						<td>
+						<input type="radio" name="thttp://192.168.1.113/a4murphy/emperature" onclick="setSize(this.value)" value="Small">
+						Small
+						<br>
+						<input type="radio" name="temperature" onclick="setSize(this.value)" value="Medium">
+						Medium
+						<br>
+						<input type="radio" name="temperature" onclick="setSize(this.value)" value="Large">
+						Large
+						<br>
+						Your size is:
+						<input type="text" id="mySize" >
+						</td>
+						<td>$ 680.12
+						<br>
+						$ 302.14
+						<br>
+						$ 269.69</td>
+						<td align="right">
+						<input id="lineSize" type="text" size="10" readonly>
+						</td>
+					</tr>
+					<tr style="background-color:#fff0b3">
+						<td>Shipping</td>
+						<td>
+						<select id="theShipper">
+							<option>Space X</option>
+							<option>NASA</option>
+							<option>JAXA</option>
+							<option>Planet Express</option>
+						</select>
+						<br>
+						<br>
+						<input type="text" id="myShipper">
+						<input type="button" onclick="setShipper()" value="Submit">
+						</td>
+						<td>$ 180.00
+						<br>
+						$ 88.25
+						<br>
+						$123.65
+						<br>
+						$5.00</td>
+						<td align="right">
+						<input name="lineShip" type="text" size="10" readonly>
+						</td>
+					</tr>
+					<tr style="background-color:#99ff99">
+						<td colspan="3" align="right">Sales Tax :</td>
+						<td align="right">
+						<input name="salesTaxDisplay" type="text" size="10" readonly>
+						</td>
+					</tr>
+					<tr style="background-color:#99ff99">
+						<td colspan="2">Calculate the Total Cost of this Order</td>
+						<td align="right">
+						<input type="button" onclick="calculateTotal()" value="Total Cost">
+						</td>
+						<td align="right">
+						<input id="finalTotal" type="text" size="10" readonly>
+						</td>
+					</tr>
+					<tr style="background-color:#df80ff">
+						<td>
+						<input type="button" value="Reset" onclick="init()">
+						</td>
+						<td colspan="2" align="right">
+						<input type="button"
+						value="Press to Verify Order"
+						onclick="get_data(this.form)">
+						</td>
+						<td align="right">
+						<input name="verifyOrder" type="text"
+						size="10" readonly>
+						</td>
+					</tr>
+
+				</tbody>
+			</table>
+		</form>
+		<form name="confirmationForm">
+			<table style="background-color:#fff0b3"
+			border="4" width="700" cellpadding="5"
+			cellspacing="0" align="center" summary="">
+				<tbody>
+					<tr>
+						<td align="center">						<textarea name="order" rows="10" cols="35">
+							</textarea></td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+		<br>
+		<h1 style="font-size:200%" class="about">About me</h1>
+		<h1 style="font-size:200%" class="about">My grandpa taught me sand business, and his grand-pappy taught him fore'. My history can be drawn back for thousands of years of prospective sand business-men.
+		I aim with my sand business to continue on their legacy and provide the essential exotic sands that many can't live without. I buy my exotic sands from locations all around the world including but not
+		limited to Sierra Leone, Sudan, Somalia, Vietnam, Iraq, Syria, and Antarctica. We ship our sands by the grain in specialized spaceships which melt the sand to over 375,000 Kelvin before shooting the
+		sand attached to giant repurposed tungsten rods weighing approximately 3.4 million tons right to your doorstep.</h1>
+
+	</body>
+
+</html>
+

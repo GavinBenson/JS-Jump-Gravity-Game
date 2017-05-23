@@ -1,0 +1,24 @@
+body {
+	background-color: #FDECBA;
+	font-family: 'Lora', serif;
+	background-image: url("../images/3.jpg");
+}
+canvas {
+	background-color: #555555;
+	border: 2.1px solid #000000;
+	box-shadow: 8px 4px 8px #0000FF;
+}
+#canvasDiv {
+	display: block;
+	width: 400px;
+	margin: auto;
+}
+h1 {
+	text-align: center;
+}
+h2 {
+	text-align: center;
+}
+#mainLink {
+	text-align: center;
+}
